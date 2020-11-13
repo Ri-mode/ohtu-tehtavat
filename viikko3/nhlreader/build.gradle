@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
 }
 
 repositories {
@@ -26,11 +27,16 @@ mainClass = 'ohtu.Main'
 
  */
 
-
-
-application {
-    mainClass = 'ohtu.Main'
+jar {
+    manifest {
+        attributes 'Main-Class': 'ohtu.Main'
+    }
 }
+
+
+//application {
+//    mainClass = 'ohtu.Main'
+//}
 
 run {
     standardInput = System.in
