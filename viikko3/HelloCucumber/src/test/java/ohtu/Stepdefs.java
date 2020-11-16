@@ -1,14 +1,16 @@
-
 package ohtu;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.junit.*;
+import io.cucumber.java.PendingException;
 import static org.junit.Assert.*;
 
 public class Stepdefs {
+
     Counter counter;
-    
+
     @Given("Counter is initialized")
     public void counterIsInitialized() {
         counter = new Counter();
@@ -26,7 +28,14 @@ public class Stepdefs {
 
     @When("it is incremented by {int}")
     public void itIsIncrementedBy(Integer val) {
-         counter.increment(val);       
-    }    
+        counter.increment(val);
+    }
+
+    @When("it is reset")
+    public void itIsReset() {
+        counter.reset();
+        // Write code here that turns the phrase above into concrete actions
+        //throw new io.cucumber.java.PendingException();
+    }
 
 }
