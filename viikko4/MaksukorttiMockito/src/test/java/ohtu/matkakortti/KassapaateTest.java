@@ -29,7 +29,7 @@ public class KassapaateTest {
         kassa.ostaLounas(kortti);
         
         verify(kortti, times(1)).getSaldo();
-//        verify(kortti).osta(anyInt());
+        verify(kortti).osta(anyInt());
         verify(kortti).osta(eq(Kassapaate.HINTA));
         
     }
@@ -41,6 +41,21 @@ public class KassapaateTest {
         
         verify(kortti, times(1)).getSaldo();
         verify(kortti, times(0)).osta(anyInt());
+    }
+    
+    @Test
+    public void kortilleVoiLadataKunSummaPositiivinen() {
+        kassa.lataa(kortti, 10);
+        
+        verify(kortti).lataa(eq(10));
+        verify(kortti, times(1)).lataa(anyInt());
+    }
+    
+    @Test
+    public void kortilleEiVoiLadataKunSummaNegatiivinen() {
+        kassa.lataa(kortti, -10);
+        
+        verify(kortti, times(0)).lataa(anyInt());
     }
       
 }
