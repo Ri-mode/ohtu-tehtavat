@@ -41,8 +41,6 @@ public class Sovellus {
         System.out.print("Mikä luku lisätään? ");
         lisLuku = lukija.nextInt();
         joukko.lisaa(lisLuku);
-        return;
-
     }
 
     private static void yhdiste() {
@@ -53,7 +51,7 @@ public class Sovellus {
         bJoukko = mikaJoukko();
         c = IntJoukko.yhdiste(aJoukko, bJoukko);
         System.out.println("A yhdiste B = " + c.toString());
-        return;
+//        return;
     }
 
     private static void leikkaus() {
@@ -64,7 +62,7 @@ public class Sovellus {
         bJoukko = mikaJoukko();
         c = IntJoukko.leikkaus(aJoukko, bJoukko);
         System.out.println("A leikkaus B = " + c.toString());
-        return;
+//        return;
     }
 
     private static void erotus() {
@@ -75,7 +73,7 @@ public class Sovellus {
         bJoukko = mikaJoukko();
         c = IntJoukko.erotus(aJoukko, bJoukko);
         System.out.println("A erotus B = " + c.toString());
-        return;
+//        return;
     }
 
     private static void poista() {
@@ -87,7 +85,7 @@ public class Sovellus {
         System.out.print("Mikä luku poistetaan? ");
         lisLuku = lukija.nextInt();
         joukko.poista(lisLuku);
-        return;
+//        return;
     }
 
     private static void kuuluu() {
@@ -104,7 +102,7 @@ public class Sovellus {
         } else {
             System.out.println(kysLuku + " ei kuulu joukkoon ");
         }
-        return;
+//        return;
     }
 
     public static void main(String[] args) {
@@ -144,7 +142,7 @@ public class Sovellus {
                 break;
             } else {
                 System.out.println("Virheellinen komento! " + luettu);
-                System.out.println("Komennot ovat lisää(li), poista(p), kuuluu(k), yhdiste(y), erotus(e) ja leikkaus(le).");
+//                System.out.println("Komennot ovat lisää(li), poista(p), kuuluu(k), yhdiste(y), erotus(e) ja leikkaus(le).");
             }
             System.out.println("Komennot ovat lisää(li), poista(p), kuuluu(k), yhdiste(y), erotus(e) ja leikkaus(le).");
         }
